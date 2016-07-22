@@ -16,6 +16,7 @@ if !filereadable(neobundle_readme)
   silent !mkdir -p ~/.vim/bundle
   silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
   let g:not_finsh_neobundle = "yes"
+endif
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -91,7 +92,6 @@ NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'amirh/HTML-AutoCloseTag'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'digitaltoad/vim-jade'
-
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -435,9 +435,6 @@ vnoremap K :m '<-2<CR>gv=gv
 noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs open<CR><CR>
 
 "" Custom configs
-
-
-
 
 let g:javascript_enable_domhtmlcss = 1
 
