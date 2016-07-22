@@ -63,7 +63,6 @@ endif
 if v:version >= 704
   "" Snippets
   NeoBundle 'SirVer/ultisnips'
-  NeoBundle 'FelikZ/ctrlp-py-matcher'
 endif
 
 NeoBundle 'honza/vim-snippets'
@@ -73,20 +72,23 @@ NeoBundle 'vim-scripts/c.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'valloric/youcompleteme'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'michalliu/sourcebeautify.vim'
 
 "" Javascript Bundle
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'isruslan/vim-es6'
 
 "" CSS Bundle
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'gorodinskiy/vim-coloresque'
 
 "" HTML Bundle
 NeoBundle 'amirh/HTML-AutoCloseTag'
-NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'digitaltoad/vim-jade'
 
