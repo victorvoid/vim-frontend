@@ -2,9 +2,7 @@
 "" NeoBundle core
 "*****************************************************************************
 if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
+  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
@@ -35,6 +33,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'vim-scripts/grep.vim'
@@ -484,3 +483,46 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+" YouCompleteMe and UltiSnips compatibility. pre-req in autoload: (https://github.com/wincent/wincent/blob/9b938b4d879a2/roles/dotfiles/files/.vim/plugin/autocomplete.vim)
+let g:UltiSnipsExpandTrigger = '<Tab>'
+let g:UltiSnipsJumpForwardTrigger = '<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+
+" Prevent UltiSnips from removing our carefully-crafted mappings.
+let g:UltiSnipsMappingsToIgnore = ['autocomplete']
+
+if has('autocmd')
+  augroup WincentAutocomplete
+    autocmd!
+    autocmd! User UltiSnipsEnterFirstSnippet
+    autocmd User UltiSnipsEnterFirstSnippet call autocomplete#setup_mappings()
+    autocmd! User UltiSnipsExitLastSnippet
+    autocmd User UltiSnipsExitLastSnippet call autocomplete#teardown_mappings()
+  augroup END
+endif
+
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:ycm_key_list_accept_completion = ['<C-y>']
+
+" Additional UltiSnips => add ultisnips folder in .vim (https://github.com/wincent/wincent/tree/9b938b4d879a297eb70d21c2b7b9e74c8e90e264/roles/dotfiles/files/.vim/ultisnips)
+let g:UltiSnipsSnippetsDir = '~/.vim/ultisnips'
+let g:UltiSnipsSnippetDirectories = ['ultisnips']
+
+" Additional YouCompleteMe config.
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+
+" Same as default, but with "markdown" and "text" removed.
+let g:ycm_filetype_blacklist = {
+      \   'notes': 1,
+      \   'unite': 1,
+      \   'tagbar': 1,
+      \   'pandoc': 1,
+      \   'qf': 1,
+      \   'vimwiki': 1,
+      \   'infolog': 1,
+      \   'mail': 1
+      \ }
