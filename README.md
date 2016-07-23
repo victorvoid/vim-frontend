@@ -1,10 +1,21 @@
 Vim Frontend: a .vimrc configured for Front-end Developers.
 ===========================================================
+![Licence](https://img.shields.io/badge/licence-MIT-red.svg?style=flat)
 
+- [Introduction](#introduction)
 - [Installation](#installation)
     - [Mac OS X](#mac-os-x)
     - [Linux x64](#linux-x64)
-- [Quick Feature Summary](#quick-feature-summary)
+- [Features Summary](#features-summary)
+- [User Guide](#user-guide)
+    - [General Commands](#general-commands)
+    
+Introduction
+------------
+
+Is you a Front-end Developer ? Are you using Sublime Text, Atom, Brackets, Visual Studio Code or anything ?
+
+> "Give me a chance. Don't worry, I'm very easy :smile: " - Vim
 
 Installation
 ------------
@@ -17,16 +28,27 @@ $ brew install git ctags
 ```
 **Just replace your .vimrc :shipit:**
 
-    cd ~ 
-    git clone https://github.com/VictorVoid/vim-frontend.git .
-    vim
-    
+```bash
+git clone clone https://github.com/VictorVoid/vim-frontend.git
+mv vim-frontend/.vimrc ~/
+```
+
 or
 
-    Download ZIP
-    cd /Users/yourusername/Download
-    unzip vim-frontend-master.zip
-    cp vim-frontend-master/.vimrc ~/
+```bash
+cd ~ 
+git clone https://github.com/VictorVoid/vim-frontend.git .
+vim
+```
+
+or
+
+```bash
+Download ZIP
+cd /Users/yourusername/Download
+unzip vim-frontend-master.zip
+mv vim-frontend-master/.vimrc ~/
+```
     
 *YouCompleteMe Plugin INFO:* :ear:
 
@@ -77,6 +99,11 @@ $ sudo dnf install ncurses-devel git ctags-etags
 
 **Just replace your .vimrc :shipit:**
 
+    git clone clone https://github.com/VictorVoid/vim-frontend.git
+    mv vim-frontend/.vimrc ~/
+
+or
+
     cd ~ 
     git clone https://github.com/VictorVoid/vim-frontend.git .
     vim
@@ -109,7 +136,7 @@ Compiling YCM **with** semantic support for C-family languages:
     
 [More info](https://github.com/Valloric/YouCompleteMe)
 
-Quick Feature Summary
+Features Summary
 -----
 
 - Syntax highlighting :white_check_mark:
@@ -124,3 +151,51 @@ Quick Feature Summary
 - Support CSS Pre-processors (SASS, LESS and Stylus) :white_check_mark:
 - Color preview (css/less/sass/html) :white_check_mark:
 - Beautify (HTML, CSS, JS) :white_check_mark:
+
+User Guide
+------------
+
+### General Commands
+
+Have you ever used this [Generator](http://vim-bootstrap.com/)(Vim Bootstrap) ? The General commands is the same thing, you don't need learning others. :bowtie:
+
+General Commands | Descriptions
+--- | ---
+`:cd <path>` | Open path */path*
+`<Control+w>+<hjkl>` | Navigate via split panels
+`<Control>+w+w` | Alternative navigate vim split panels
+`,.` | Set path working directory
+`,w or ,x` | Next buffer navigate
+`,q or ,z` | previous buffer navigate
+`SHIFT+t` | Create a tab
+`TAB` | next tab navigate
+`SHIFT+TAB` | previous tab navigate
+`,e`  | Find and open files
+`,b`  | Find file on buffer (open file)
+`,c`  | Close active buffer (clone file)
+`F2`  | Open tree navigate in actual opened file
+`F3`  | Open/Close tree navigate files
+`F4`  | List all class and method, support for python, go, lua, ruby and php
+`,v`  | Split vertical
+`,h`  | Split horizontal
+`,f`  | Search in the project
+`,o`  | Open github file/line (website), if used git in **github**
+`,sh` | Open shell.vim terminal inside Vim or NeoVim built-in terminal
+`,ga` | Execute *git add* on current file
+`,gc` | git commit (splits window to write commit message)
+`,gsh`| git push
+`,gll`| git pull
+`,gs` | git status
+`,gb` | git blame
+`,gd` | git diff
+`,gr` | git remove
+`,so` | Open Session
+`,ss` | Save Session
+`,sd` | Delete Session
+`,sc` | Close Session
+`>`   | indent to right
+`<`   | indent to left
+`gc`  | Comment or uncomment lines that {motion} moves over
+`YY`  | Copy to clipboard
+`,p`  | Paste
+`<Control+y>,` | Activate Emmet plugin
