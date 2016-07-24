@@ -42,6 +42,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
@@ -79,7 +80,6 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'isruslan/vim-es6'
 
 "" CSS Bundle
 NeoBundle 'wavded/vim-stylus'
