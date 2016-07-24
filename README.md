@@ -1,6 +1,7 @@
 Vim Frontend: a .vimrc configured for Front-end Developers.
 ===========================================================
 ![Licence](https://img.shields.io/badge/licence-MIT-red.svg?style=flat)
+![asciinema](https://img.shields.io/badge/asciinema-demos-brightgreen.svg)
 
 - [Introduction](#introduction)
 - [Installation](#installation)
@@ -9,13 +10,16 @@ Vim Frontend: a .vimrc configured for Front-end Developers.
 - [Features Summary](#features-summary)
 - [User Guide](#user-guide)
     - [General Commands](#general-commands)
+    - [HTML Commands](#html-commands)
     
 Introduction
 ------------
 
 Is you a Front-end Developer ? Are you using Sublime Text, Atom, Brackets, Visual Studio Code or anything ?
 
-> "Give me a chance. Don't worry, I'm very easy :smile: " - Vim
+> "Give me a chance. Don't worry, I'm easy :smile: " - Vim
+
+[Quick demo videos](https://asciinema.org/~victorvoid)
 
 Installation
 ------------
@@ -199,3 +203,21 @@ General Commands | Descriptions
 `YY`  | Copy to clipboard
 `,p`  | Paste
 `<Control+y>,` | Activate Emmet plugin
+
+HTML Commands
+------------
+
+Commands | Descriptions
+--- | ---
+`html5+<tab>` | snippet html tree
+`css+<tab>` | snippet link css
+`ysiw` | wrap tag in word
+`yss` | wrap the entire line
+`cst <updatetag>` | change tag to update tag
+`cs"'` | change " to '
+`ds"` |  remove the delimiters entirely
+`dst"` |  remove the delimiters entirely (t == tag)
+
+- [Video demonstration](https://asciinema.org/a/80816)
+- [Emmet Cheat Sheet](http://docs.emmet.io/cheat-sheet/)
+- [Vim-surround](https://github.com/tpope/vim-surround)
