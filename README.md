@@ -10,7 +10,7 @@ Vim Frontend: a .vimrc configured for Front-end Developers.
 - [Features Summary](#features-summary)
 - [User Guide](#user-guide)
     - [General Commands](#general-commands)
-    - [Vim Commands](#vim-commands)
+    - [Learning Vim](#vim-commands)
     - [HTML Commands](#html-commands)
     - [JavaScript Commands](#javascript-commands)
     
@@ -207,14 +207,15 @@ General Commands | Descriptions
 `<Control+y>,` | Activate Emmet plugin
 
 
-Vim Commands
+Learning Vim
 ------------
 
 You can learn basic vim here: 
 
-
+* [The 30 Basic Vim Commands You'll Use Every Day](https://spin.atomicobject.com/2016/04/19/vim-commands-cheat-sheet/)
 * [Vimbook (in portuguese)](https://cassiobotaro.gitbooks.io/vimbook/content/)
 * [Vim para noobs (in portuguese)](https://woliveiras.com.br/vimparanoobs/)
+* [VIM Editor Commands ](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)
 
 HTML Commands
 ------------
