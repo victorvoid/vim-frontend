@@ -10,7 +10,9 @@ Vim Frontend: a .vimrc configured for Front-end Developers.
 - [Features Summary](#features-summary)
 - [User Guide](#user-guide)
     - [General Commands](#general-commands)
+    - [Vim Commands](#vim-commands)
     - [HTML Commands](#html-commands)
+    - [JavaScript Commands](#javascript-commands)
     
 Introduction
 ------------
@@ -143,18 +145,18 @@ Compiling YCM **with** semantic support for C-family languages:
 Features Summary
 -----
 
-- Syntax highlighting :white_check_mark:
-- JavaScript autocomplete ([ternjs](http://ternjs.net/)) :white_check_mark:
-- ES6 Snippets :white_check_mark:
-- HTML with auto close tag :white_check_mark:
-- Git Support :white_check_mark: 
-- Emmet :white_check_mark:
-- TagBar (overview of its structure) :white_check_mark:
-- Vim Session (restore your Vim editing sessions) :white_check_mark:
-- Surround (provides mappings to easily delete, change and add such surroundings in pairs) :white_check_mark:
-- Support CSS Pre-processors (SASS, LESS and Stylus) :white_check_mark:
-- Color preview (css/less/sass/html) :white_check_mark:
-- Beautify (HTML, CSS, JS) :white_check_mark:
+- Automatic syntax and codestyle checks.
+- JavaScript autocomplete ([ternjs](http://ternjs.net/))
+- HTML with auto close tag
+- Integration with Git
+- Emmet
+- Snippets
+- TagBar (overview of its structure)
+- Vim Session (restore your Vim editing sessions)
+- Surround (provides mappings to easily delete, change and add such surroundings in pairs)
+- Integration with CSS Pre-processors (SASS, LESS and Stylus)
+- Color preview (css/less/sass/html)
+- Beautify (HTML, CSS, JS)
 
 User Guide
 ------------
@@ -204,8 +206,20 @@ General Commands | Descriptions
 `,p`  | Paste
 `<Control+y>,` | Activate Emmet plugin
 
+
+Vim Commands
+------------
+
+You can learn basic vim here: 
+
+
+* [Vimbook (in portuguese)](https://cassiobotaro.gitbooks.io/vimbook/content/)
+* [Vim para noobs (in portuguese)](https://woliveiras.com.br/vimparanoobs/)
+
 HTML Commands
 ------------
+
+[![asciicast](https://asciinema.org/a/80816.png)](https://asciinema.org/a/80816)
 
 Commands | Descriptions
 --- | ---
@@ -218,6 +232,187 @@ Commands | Descriptions
 `ds"` |  remove the delimiters entirely
 `dst"` |  remove the delimiters entirely (t == tag)
 
+**Navigating HTML tags in Vim**
+
+1. Enter visual mode
+2. Select the outer tag block by pressing  **a** + **t** or **i** + **t** for inner tag block.
+
 - [Video demonstration](https://asciinema.org/a/80816)
 - [Emmet Cheat Sheet](http://docs.emmet.io/cheat-sheet/)
 - [Vim-surround](https://github.com/tpope/vim-surround)
+
+JavaScript Commands
+-------------------
+
+[![asciicast](https://asciinema.org/a/80829.png)](https://asciinema.org/a/80829)
+
+**vf**
+
+```js
+var functioname = function (arg){
+    //
+}
+```
+
+**
+
+```js
+/**
+*
+**/
+```
+
+**ex**
+
+```js
+
+module.exports = yourmod
+
+```
+
+**css**
+
+```js
+
+{yourobj}.css('atribuite', 'value')
+
+```
+
+**qs**
+
+```js
+
+document.querySelector('selector')
+
+document.querySelectorAll('selector') //qsa
+
+```
+
+**trf**
+
+```js
+
+try {
+
+} catch (e) {
+
+} finally {
+
+}
+```
+
+**proto**
+
+```js
+
+class_name.prototype.method_name = function(){
+    
+}
+```
+
+**props**
+
+```js
+
+var my_object = Object.defineProperties{
+    new Object(),
+    {
+        property: {
+            get: function my_object_property_getter(){
+            
+            },
+            set: function my_object_property_setter(value){
+            
+            },
+            value       : value,
+            writeable   : boolean,
+            enumerable  : boolean,
+            configurable: boolean
+        }
+    }
+}
+```
+
+**us**
+
+```js
+'use strict';
+```
+
+**=>**
+
+```js
+
+( ) => {
+
+}
+
+```
+
+**cla**
+
+```js
+
+Class classname{
+
+
+}
+```
+
+**clax**
+
+
+```js
+Class classname extends classname{
+
+}
+
+```
+
+**imp**
+
+```js
+import ModuleName from 'ModuleName'
+
+```
+
+
+**cc**
+
+
+```js
+
+const app = React.createClass({
+    render: function(){
+    
+    }
+})
+
+```
+
+
+**cdm**
+
+
+```js
+
+componentDidMount: function(){
+
+},
+
+```
+
+
+**gis**
+
+
+```js
+getInitialState: function(){
+    return {
+    
+    };
+},
+```
+
+- [Video demonstration](https://asciinema.org/a/80829)
+- [More information about Snippets](https://github.com/honza/vim-snippets)
