@@ -10,7 +10,7 @@ Vim Frontend: a .vimrc configured for Front-end Developers.
 - [Features Summary](#features-summary)
 - [User Guide](#user-guide)
     - [General Commands](#general-commands)
-    - [Learning Vim](#vim-commands)
+    - [Learning Vim](#learning-commands)
     - [HTML Commands](#html-commands)
     - [JavaScript Commands](#javascript-commands)
     
