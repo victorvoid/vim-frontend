@@ -35,7 +35,7 @@ $ brew install git ctags
 **Just replace your .vimrc :shipit:**
 
 ```bash
-git clone clone https://github.com/VictorVoid/vim-frontend.git
+git clone https://github.com/VictorVoid/vim-frontend.git
 mv vim-frontend/.vimrc ~/
 ```
 
