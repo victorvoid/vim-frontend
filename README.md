@@ -1,4 +1,4 @@
-Vim Frontend: a .vimrc configured for Front-end Developers.
+Vim Frontend: a Vim configured for Front-end Developers.
 ===========================================================
 ![Licence](https://img.shields.io/badge/licence-MIT-red.svg?style=flat)
 ![asciinema](https://img.shields.io/badge/asciinema-demos-brightgreen.svg)
@@ -10,7 +10,7 @@ Vim Frontend: a .vimrc configured for Front-end Developers.
 - [Features Summary](#features-summary)
 - [User Guide](#user-guide)
     - [General Commands](#general-commands)
-    - [Learning Vim](#learning-commands)
+    - [Learning Vim](#learning-vim)
     - [HTML Commands](#html-commands)
     - [JavaScript Commands](#javascript-commands)
     
@@ -36,24 +36,17 @@ $ brew install git ctags
 
 ```bash
 git clone https://github.com/VictorVoid/vim-frontend.git
-mv vim-frontend/.vimrc ~/
+mv vim-frontend/.vimrc ~/ && mv vim-frontend/autoload/ ~/.vim && mv vim-frontend/ultisnips/ ~/.vim
 ```
 
 or
 
 ```bash
-cd ~ 
-git clone https://github.com/VictorVoid/vim-frontend.git .
-vim
-```
-
-or
-
-```bash
-Download ZIP
+- Download ZIP
 cd /Users/yourusername/Download
+- Open terminal
 unzip vim-frontend-master.zip
-mv vim-frontend-master/.vimrc ~/
+mv vim-frontend/.vimrc ~/ && mv vim-frontend/autoload/ ~/.vim && mv vim-frontend/ultisnips/ ~/.vim
 ```
     
 *YouCompleteMe Plugin INFO:* :ear:
@@ -106,21 +99,16 @@ $ sudo dnf install ncurses-devel git ctags-etags
 **Just replace your .vimrc :shipit:**
 
     git clone clone https://github.com/VictorVoid/vim-frontend.git
-    mv vim-frontend/.vimrc ~/
+    mv vim-frontend/.vimrc ~/ && mv vim-frontend/autoload/ ~/.vim && mv vim-frontend/ultisnips/ ~/.vim
 
 or
 
-    cd ~ 
-    git clone https://github.com/VictorVoid/vim-frontend.git .
-    vim
-    
-or
-
-    Download ZIP
+    - Download ZIP
     cd /Users/yourusername/Download
+    - Open terminal
     sudo apt-get install unzip
     unzip file.zip -d
-    cp vim-frontend-master/.vimrc ~/
+    mv vim-frontend/.vimrc ~/ && mv vim-frontend/autoload/ ~/.vim && mv vim-frontend/ultisnips/ ~/.vim
     
     
 *YouCompleteMe Plugin INFO:* :ear:
