@@ -11,6 +11,7 @@ Vim Frontend: a Vim configured for Front-end Developers.
 - [User Guide](#user-guide)
     - [General Commands](#general-commands)
     - [Learning Vim](#learning-vim)
+        - [Super Fast Navigation](#super-fast-navigation)
     - [HTML Commands](#html-commands)
     - [JavaScript Commands](#javascript-commands)
     
@@ -200,10 +201,38 @@ Learning Vim
 
 You can learn basic vim here: 
 
+* [The 11 Steps to Learning Vim](https://github.com/damassi/learn-vim)
 * [The 30 Basic Vim Commands You'll Use Every Day](https://spin.atomicobject.com/2016/04/19/vim-commands-cheat-sheet/)
 * [Vimbook (in portuguese)](https://cassiobotaro.gitbooks.io/vimbook/content/)
 * [Vim para noobs (in portuguese)](https://woliveiras.com.br/vimparanoobs/)
 * [VIM Editor Commands ](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)
+
+### Super Fast Navigation
+
+Commands | Descriptions
+--- | ---
+`e` | Move to the end of a word
+`w` | :arrow_right: Move forward to the beginning of a word ->
+`W` | :arrow_right: Move forward a WORD (any non-whitespace characters)
+`b` | :arrow_left: Move backward to the beginning of a word
+`(` | :arrow_down: Jump backward one sentence
+`)` | :arrow_up: Jump forward one sentence.
+`3w, 3b` | :left_right_arrow: Move forward three words, Move backward three words
+`$` | Move to the end of the line
+`0"` | Move to the beginning of the line
+`H` | Jump to the top of the screen
+`M` | Jump to the middle of the screen
+`L` | Jump to the bottom of the screen
+`mx` | Set mark x at the current cursor position
+`'x` | Jump to the beginning of the line of mark x
+``x` | Jump to the cursor position of mark x
+
+HTML Visual Navigation | Descriptions
+--- | ---
+`at` | Select the outer tag block by pressing
+`it` | Select the inner tag block
+
+
 
 HTML Commands
 ------------
