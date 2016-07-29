@@ -14,6 +14,7 @@ Vim Frontend: a Vim configured for Front-end Developers.
         - [Super Fast Navigation](#super-fast-navigation)
     - [HTML Commands](#html-commands)
     - [JavaScript Commands](#javascript-commands)
+    - [CSS Commands](#javascript-commands)
     
 Introduction
 ------------
@@ -434,3 +435,8 @@ getInitialState: function(){
 
 - [Video demonstration](https://asciinema.org/a/80829)
 - [More information about Snippets](https://github.com/honza/vim-snippets)
+
+CSS Commands
+-------------------
+
+[CSS Abbreviations](http://docs.emmet.io/css-abbreviations/)
