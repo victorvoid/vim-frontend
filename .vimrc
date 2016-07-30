@@ -80,7 +80,7 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'mxw/vim-jsx'
-
+NeoBundle 'leafgarland/typescript-vim'
 "" CSS Bundle
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'hail2u/vim-css3-syntax'
