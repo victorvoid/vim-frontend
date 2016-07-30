@@ -450,11 +450,106 @@ Commands | Directive
 `nctrl` | ng-controller=""
 `ncl` |  ng-class=""
 `nm` | ng-model=""
-`nm` | ng-model=""
-`nm` | ng-model=""
+`ns` | ng-show=""
+`nh` | ng-hide=""
+`nb` | ng-bind=""
+`{{` | {{}}
+`n2c` | (click)=""
+`n2dbc` | (dblclick)=""
+`n2ctrl` | ngController=""
+`n2m` | [(ngModel)]=""
+`n2cl` | [ngClass]=""
+
 **ngsa**
 ```html
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/x.x.xx/angular.js"></script> 
+```
+
+**$v**
+```js
+$scope.variable = value;
+```
+
+**ngc**
+```js
+var controllerName = function(scope, injectables){
+
+};
+```
+
+**ngfor**
+```js
+angularforEach(iterateOver, function(value, key){
+    
+});
+```
+
+**ngm**
+```js
+angular.module('moduleName', [moduleDependencies]);
+```
+
+**ngma**
+```js
+var moduleName = angular.module('moduleName', [moduleDeps]);
+```
+
+**ngmfa**
+```js
+factory('factoryName', function(dependencies){
+
+});
+```
+
+**ngms**
+```js
+service('serviceName', function(injectables){
+
+});
+```
+
+**ngmfi**
+```js
+filter('filterName', function(injectables){
+    return function(inputs, args){
+    
+    };
+});
+```
+
+**ngrwr**
+```js
+
+$routeProvider.when('url', {
+    templateUrl: 'templateUrl',
+    controller: 'controller',
+    resolve: {
+    
+    }
+});
+
+```
+
+**ngro**
+```js
+$routeProvider.otherwise({
+    redirectTo: 'url'
+});
+```
+
+**TypeScript**:
+
+Snippets from [Martin Prins](https://github.com/magarcia/vim-angular2-snippets)
+
+```typescript
+ng2-component-root  // Angular 2 root App component
+ng2-bootstrap     // Angular 2 bootstraping, for main.ts
+ng2-component     // Angular 2 component
+ng2-pipe          // Angular 2 pipe
+ng2-route-config  // Angular 2 @RouteConfig
+ng2-route-path    // Angular 2 routing path
+ng2-service       // Angular 2 service
+ng2-subscribe     // Angular 2 observable subscription
 ```
 
 CSS Commands
