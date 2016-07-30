@@ -14,6 +14,8 @@ Vim Frontend: a Vim configured for Front-end Developers.
         - [Super Fast Navigation](#super-fast-navigation)
     - [HTML Commands](#html-commands)
     - [JavaScript Commands](#javascript-commands)
+        - [JavaScript ES6 React](#javascript-es6-react)
+        - [AngularJS 1 e 2](#angularjs-1-e-2)
     - [CSS Commands](#javascript-commands)
     
 Introduction
@@ -263,6 +265,7 @@ Commands | Descriptions
 JavaScript Commands
 -------------------
 
+### JavaScript ES6 React
 [![asciicast](https://asciinema.org/a/80829.png)](https://asciinema.org/a/80829)
 
 **vf**
@@ -435,6 +438,24 @@ getInitialState: function(){
 
 - [Video demonstration](https://asciinema.org/a/80829)
 - [More information about Snippets](https://github.com/honza/vim-snippets)
+
+### AngularJS 1 e 2
+
+[![asciicast](https://asciinema.org/a/81384.png)](https://asciinema.org/a/81384)
+
+Commands | Directive
+--- | ---
+`na` | ng-app=""
+`nc` | ng-click=""
+`nctrl` | ng-controller=""
+`ncl` |  ng-class=""
+`nm` | ng-model=""
+`nm` | ng-model=""
+`nm` | ng-model=""
+**ngsa**
+```html
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/x.x.xx/angular.js"></script> 
+```
 
 CSS Commands
 -------------------
