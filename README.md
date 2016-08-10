@@ -102,7 +102,7 @@ $ sudo dnf install ncurses-devel git ctags-etags
 
 **Just replace your .vimrc :shipit:**
 
-    git clone clone https://github.com/VictorVoid/vim-frontend.git
+    git clone https://github.com/VictorVoid/vim-frontend.git
     mv vim-frontend/.vimrc ~/ && mv vim-frontend/autoload/ ~/.vim && mv vim-frontend/ultisnips/ ~/.vim
 
 or
