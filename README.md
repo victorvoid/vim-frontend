@@ -16,6 +16,7 @@ Vim Frontend: a Vim configured for Front-end Developers.
     - [JavaScript Commands](#javascript-commands)
         - [JavaScript ES6 React](#javascript-es6-react)
         - [AngularJS 1 e 2](#angularjs-1-e-2)
+        - [TypeScript](#typescript)
     - [CSS Commands](#javascript-commands)
     
 Introduction
@@ -537,7 +538,8 @@ $routeProvider.otherwise({
 });
 ```
 
-**TypeScript**:
+### TypeScript
+
 
 Snippets from [Martin Prins](https://github.com/magarcia/vim-angular2-snippets)
 
