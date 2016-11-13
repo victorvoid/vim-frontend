@@ -3,35 +3,67 @@ if &compatible
   endif
 filetype off
 " append to runtime path
-set rtp+=/usr/share/vim/vimfiles
+set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 " initialize dein, plugins are installed to this directory
 call dein#begin(expand('~/.cache/dein'))
 
-"" add packages here
+" add packages here
+
+" TREE TAB
 call dein#add('scrooloose/nerdtree')
 call dein#add('jistr/vim-nerdtree-tabs.git')
+
+" Smart comments
 call dein#add('tpope/vim-commentary')
+
+"Git
 call dein#add('tpope/vim-fugitive')
+
+"Fuzzy file, buffer, mru, tag, etc finder. 
 call dein#add('ctrlpvim/ctrlp.vim')
+
+"Visual tab {bottom}
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+
+"Packages themes
 call dein#add('flazz/vim-colorschemes')
+
+"Shows a git diff in the gutter (sign column) and stages/undoes hunks.
 call dein#add('airblade/vim-gitgutter')
+
+"A collection of language packs for Vim.
 call dein#add('sheerun/vim-polyglot')
-call dein#add('vim-scripts/grep.vim')
+
+"Make gvim-only colorschemes work transparently in terminal vim
 call dein#add('vim-scripts/CSApprox')
+
+"This plugin causes all trailing whitespace to be highlighted in red.
 call dein#add('bronson/vim-trailing-whitespace')
+
+"Insert or delete brackets, parens, quotes in pair.
 call dein#add('jiangmiao/auto-pairs')
+
+"Tagbar displays the tags of the current file in a sidebar,
 call dein#add('majutsushi/tagbar')
+
+"Syntax checking hacks for vim
 call dein#add('scrooloose/syntastic')
+
+"Multiple Cursors
 call dein#add('terryma/vim-multiple-cursors')
+
+"Display the indention levels with thin vertical lines
 call dein#add('Yggdroot/indentLine')
+
+"Interactive command execution in Vim.
 call dein#add('Shougo/vimproc.vim')
 
-"" Vim-Session
+"" Vim Session
 call dein#add('xolox/vim-misc')
 call dein#add('xolox/vim-session')
 
+"Improved integration between Vim and its environment 
 call dein#add('Shougo/vimshell.vim')
 
 "" Snippets
@@ -39,7 +71,6 @@ call dein#add('SirVer/ultisnips')
 call dein#add('honza/vim-snippets')
 
 "" Custom bundles
-call dein#add('vim-scripts/c.vim')
 call dein#add('tpope/vim-surround')
 call dein#add('Valloric/YouCompleteMe')
 call dein#add('mattn/emmet-vim')
@@ -51,6 +82,7 @@ call dein#add('marijnh/tern_for_vim')
 call dein#add('burnettk/vim-angular')
 call dein#add('mxw/vim-jsx')
 call dein#add('leafgarland/typescript-vim')
+
 "" CSS Bundle
 call dein#add('wavded/vim-stylus')
 call dein#add('hail2u/vim-css3-syntax')
@@ -87,8 +119,8 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 
-"" Map leader to ,
-let mapleader=','
+"" Map leader to space
+let mapleader=' '
 
 "" Enable hidden buffers
 set hidden
@@ -127,9 +159,10 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
-  colorscheme hybrid
+  colorscheme Benokai
   set background=dark
 endif
+
 set mouse=a
 set mousemodel=popup
 set t_Co=256
@@ -180,12 +213,6 @@ if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
 
-" vim-airline
-let g:airline_theme = 'bubblegum'
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
 
 "*****************************************************************************
 "" Abbreviations
@@ -271,19 +298,22 @@ set autoread
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
-"" Split
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
+
+"" Tabs
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-n> :tabnew<CR>
+
 
 "" Git
+noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gd :Gvdiff<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -291,10 +321,9 @@ nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
-"" Tabs
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
+"" Split
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
@@ -321,15 +350,9 @@ endif
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_map = '<leader>e'
+let g:ctrlp_map = '<leader>s'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-
-" snippets
-let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -409,10 +432,8 @@ augroup END
 
 
 "*****************************************************************************
-"" Convenience variables
+"" Airline
 "*****************************************************************************
-
-" vim-airline
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -437,7 +458,6 @@ if !exists('g:airline_powerline_fonts')
 else
   let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
-
   " powerline symbols
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
@@ -447,6 +467,17 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+let g:airline_theme = 'bubblegum'
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+
+
+"*****************************************************************************
+"" Convenience variables
+"*****************************************************************************
 
 " YouCompleteMe and UltiSnips compatibility. pre-req in autoload: (https://github.com/wincent/wincent/blob/9b938b4d879a2/roles/dotfiles/files/.vim/plugin/autocomplete.vim)
 let g:UltiSnipsExpandTrigger = '<C-l>'
