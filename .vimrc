@@ -1,110 +1,74 @@
-"*****************************************************************************
-"" NeoBundle core
-"*****************************************************************************
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+if &compatible
+      set nocompatible
+  endif
+filetype off
+" append to runtime path
+set rtp+=/usr/share/vim/vimfiles
+" initialize dein, plugins are installed to this directory
+call dein#begin(expand('~/.cache/dein'))
 
-let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-
-if !filereadable(neobundle_readme)
-  echo "Installing NeoBundle..."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
-  let g:not_finsh_neobundle = "yes"
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-"*****************************************************************************
-"" NeoBundle install packages
-"*****************************************************************************
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jistr/vim-nerdtree-tabs.git'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'vim-scripts/grep.vim'
-NeoBundle 'vim-scripts/CSApprox'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+"" add packages here
+call dein#add('scrooloose/nerdtree')
+call dein#add('jistr/vim-nerdtree-tabs.git')
+call dein#add('tpope/vim-commentary')
+call dein#add('tpope/vim-fugitive')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
+call dein#add('flazz/vim-colorschemes')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('sheerun/vim-polyglot')
+call dein#add('vim-scripts/grep.vim')
+call dein#add('vim-scripts/CSApprox')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('jiangmiao/auto-pairs')
+call dein#add('majutsushi/tagbar')
+call dein#add('scrooloose/syntastic')
+call dein#add('terryma/vim-multiple-cursors')
+call dein#add('Yggdroot/indentLine')
+call dein#add('Shougo/vimproc.vim')
 
 "" Vim-Session
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'xolox/vim-session'
+call dein#add('xolox/vim-misc')
+call dein#add('xolox/vim-session')
 
-if v:version >= 703
-  NeoBundle 'Shougo/vimshell.vim'
-endif
+call dein#add('Shougo/vimshell.vim')
 
-if v:version >= 704
-  "" Snippets
-  NeoBundle 'SirVer/ultisnips'
-endif
-
-NeoBundle 'honza/vim-snippets'
+"" Snippets
+call dein#add('SirVer/ultisnips')
+call dein#add('honza/vim-snippets')
 
 "" Custom bundles
-NeoBundle 'vim-scripts/c.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'valloric/youcompleteme'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'michalliu/sourcebeautify.vim'
+call dein#add('vim-scripts/c.vim')
+call dein#add('tpope/vim-surround')
+call dein#add('Valloric/YouCompleteMe')
+call dein#add('mattn/emmet-vim')
+call dein#add('michalliu/sourcebeautify.vim')
 
 "" Javascript Bundle
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'burnettk/vim-angular'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'leafgarland/typescript-vim'
+call dein#add('jelera/vim-javascript-syntax')
+call dein#add('marijnh/tern_for_vim')
+call dein#add('burnettk/vim-angular')
+call dein#add('mxw/vim-jsx')
+call dein#add('leafgarland/typescript-vim')
 "" CSS Bundle
-NeoBundle 'wavded/vim-stylus'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'gorodinskiy/vim-coloresque'
+call dein#add('wavded/vim-stylus')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('groenewege/vim-less')
+call dein#add('gorodinskiy/vim-coloresque')
 
 "" HTML Bundle
-NeoBundle 'amirh/HTML-AutoCloseTag'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'digitaltoad/vim-jade'
+call dein#add('amirh/HTML-AutoCloseTag')
+call dein#add('tpope/vim-haml')
+call dein#add('digitaltoad/vim-jade')
 
-"" Include user's extra bundle
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
+" exit dein
+call dein#end()
+" auto-install missing packages on startup
+if dein#check_install()
+  call dein#install()
 endif
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+filetype plugin on
 
 "*****************************************************************************
 "" Basic Setup
@@ -362,9 +326,9 @@ let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " syntastic
@@ -485,9 +449,9 @@ else
 endif
 
 " YouCompleteMe and UltiSnips compatibility. pre-req in autoload: (https://github.com/wincent/wincent/blob/9b938b4d879a2/roles/dotfiles/files/.vim/plugin/autocomplete.vim)
-let g:UltiSnipsExpandTrigger = '<Tab>'
-let g:UltiSnipsJumpForwardTrigger = '<Tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+let g:UltiSnipsExpandTrigger = '<C-l>'
+let g:UltiSnipsJumpForwardTrigger = '<c-b>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-z>'
 
 " Prevent UltiSnips from removing our carefully-crafted mappings.
 let g:UltiSnipsMappingsToIgnore = ['autocomplete']
