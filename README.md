@@ -73,7 +73,7 @@ Install cmake via Homebrew
     
 Compiling YCM **with** semantic support for C-family languages:
 
-    cd ~/.vim/bundle/YouCompleteMe
+    cd  ~/.cache/dein/repos/github.com/Valloric/YouCompleteMe
     ./install.py --clang-completer
     
 [More info](https://github.com/Valloric/YouCompleteMe)
@@ -130,7 +130,7 @@ python3-dev`.
 
 Compiling YCM **with** semantic support for C-family languages:
 
-    cd ~/.vim/bundle/YouCompleteMe
+    cd ~/.cache/dein/repos/github.com/Valloric/YouCompleteMe
     ./install.py --clang-completer
     
 [More info](https://github.com/Valloric/YouCompleteMe)
@@ -148,7 +148,7 @@ Features Summary
 - Vim Session (restore your Vim editing sessions)
 - Surround (provides mappings to easily delete, change and add such surroundings in pairs)
 - Integration with CSS Pre-processors (SASS, LESS and Stylus)
-- Color preview (css/less/sass/html)
+- Color preview (css/less/sass/stylus/html)
 - Beautify (HTML, CSS, JS)
 
 User Guide
@@ -156,48 +156,72 @@ User Guide
 
 ### General Commands
 
-Have you ever used this [Generator](http://vim-bootstrap.com/)(Vim Bootstrap) ? The General commands is the same thing, you don't need learning others. :bowtie:
+## Git
 
-General Commands | Descriptions
+Commands    | Descriptions
 --- | ---
+`<space>ga` | Execute *git add* on current file
+`<space>gc` | git commit (splits window to write commit message)
+`<space>gsh`| git push
+`<space>gll`| git pull
+`<space>gs` | git status
+`<space>gb` | git blame
+`<space>gd` | git diff
+`<space>gr` | git remove
+
+## Find buffers and file
+
+Commands    | Descriptions
+--- | ---
+`<space>s`  | Find and open files
+`<space>b`  | Find file on buffer (open file)
+`<space>c`  | Close active buffer (clone file)
+
+## Navigations
+
+Commands    | Descriptions
+--- | ---
+`<space>.` | Set path working directory
 `:cd <path>` | Open path */path*
-`<Control+w>+<hjkl>` | Navigate via split panels
 `<Control>+w+w` | Alternative navigate vim split panels
-`,.` | Set path working directory
-`,w or ,x` | Next buffer navigate
-`,q or ,z` | previous buffer navigate
-`SHIFT+t` | Create a tab
-`TAB` | next tab navigate
+`<space>w or <space>x` | Next buffer navigate
+`<space>q or <space>z` | previous buffer navigate
+`SHIFT+n` | Create a tab
 `SHIFT+TAB` | previous tab navigate
-`,e`  | Find and open files
-`,b`  | Find file on buffer (open file)
-`,c`  | Close active buffer (clone file)
+`TAB` | next tab navigate
+`<Control+w>+<hjkl>` | Navigate via split panels
 `F2`  | Open tree navigate in actual opened file
 `F3`  | Open/Close tree navigate files
 `F4`  | List all class and method, support for python, go, lua, ruby and php
-`,v`  | Split vertical
-`,h`  | Split horizontal
-`,f`  | Search in the project
-`,o`  | Open github file/line (website), if used git in **github**
-`,sh` | Open shell.vim terminal inside Vim or NeoVim built-in terminal
-`,ga` | Execute *git add* on current file
-`,gc` | git commit (splits window to write commit message)
-`,gsh`| git push
-`,gll`| git pull
-`,gs` | git status
-`,gb` | git blame
-`,gd` | git diff
-`,gr` | git remove
-`,so` | Open Session
-`,ss` | Save Session
-`,sd` | Delete Session
-`,sc` | Close Session
+
+## Sessions
+
+Commands    | Descriptions
+--- | ---
+`<space>so` | Open Session
+`<space>ss` | Save Session
+`<space>sd` | Delete Session
+`<space>sc` | Close Session
+
+
+## Code
+
+Commands    | Descriptions
+--- | ---
 `>`   | indent to right
 `<`   | indent to left
 `gc`  | Comment or uncomment lines that {motion} moves over
 `YY`  | Copy to clipboard
-`,p`  | Paste
+`<space>p`  | Paste
+`<Control+l>` |  UltiSnips Expand Trigger
 `<Control+y>,` | Activate Emmet plugin
+
+## Splits
+ 
+ Commands    | Descriptions
+--- | ---
+`<space>v`  | Split vertical
+`<space>h`  | Split horizontal
 
 
 Learning Vim
@@ -245,8 +269,8 @@ HTML Commands
 
 Commands | Descriptions
 --- | ---
-`html5+<tab>` | snippet html tree
-`css+<tab>` | snippet link css
+`html5+<ctrl l>` | snippet html tree
+`css+<ctrl l>` | snippet link css
 `ysiw` | wrap tag in word
 `yss` | wrap the entire line
 `cst <updatetag>` | change tag to update tag
