@@ -31,12 +31,23 @@ Is you a Front-end Developer ? Are you using Sublime Text, Atom, Brackets, Visua
 Installation
 ------------
 
+
+### If you are using Unix/Linux or Mac OS X.
+
+```
+$ mkdir -p ~/.vim/bundle/repos/github.com/Shougo/dein.vim
+$ git clone https://github.com/Shougo/dein.vim \
+~/.vim/bundle/repos/github.com/Shougo/dein.vim
+```
+
 ### Mac OS X
 
 *Pre-requisite*:
+
 ```
 $ brew install git ctags
 ```
+
 **Just replace your .vimrc :shipit:**
 
 ```bash
@@ -193,6 +204,7 @@ Commands    | Descriptions
 `F2`  | Open tree navigate in actual opened file
 `F3`  | Open/Close tree navigate files
 `F4`  | List all class and method, support for python, go, lua, ruby and php
+`<space>+0`  | Focus on tree navigate files
 
 ## Sessions
 
