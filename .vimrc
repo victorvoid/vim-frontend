@@ -90,7 +90,7 @@ call dein#add('groenewege/vim-less')
 call dein#add('gorodinskiy/vim-coloresque')
 
 "" HTML Bundle
-call dein#add('amirh/HTML-AutoCloseTag')
+call dein#add('vim-scripts/HTML-AutoCloseTag')
 call dein#add('tpope/vim-haml')
 call dein#add('digitaltoad/vim-jade')
 
