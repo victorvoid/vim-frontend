@@ -38,6 +38,8 @@ Installation
 $ mkdir -p ~/.vim/bundle/repos/github.com/Shougo/dein.vim
 $ git clone https://github.com/Shougo/dein.vim \
 ~/.vim/bundle/repos/github.com/Shougo/dein.vim
+
+$ set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 ```
 
 ### Mac OS X
