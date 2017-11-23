@@ -35,11 +35,9 @@ Installation
 ### If you are using Unix/Linux or Mac OS X.
 
 ```
-$ mkdir -p ~/.vim/bundle/repos/github.com/Shougo/dein.vim
-$ git clone https://github.com/Shougo/dein.vim \
-~/.vim/bundle/repos/github.com/Shougo/dein.vim
+$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+$ sh ./installer.sh {specify the installation directory}
 
-$ set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 ```
 
 ### Mac OS X
