@@ -159,7 +159,7 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
-  colorscheme Tomorrow-Dark
+  colorscheme Tomorrow-Night
   set background=dark
 endif
 
